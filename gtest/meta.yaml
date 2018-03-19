@@ -1,0 +1,15 @@
+package:
+  name: gtest
+  version: 1.7.0
+
+source:
+  fn:  gtest-1.7.0.zip
+  url: https://github.com/google/googletest/archive/release-1.7.0.zip
+
+requirements:
+  build:
+    - cmake
+
+about:
+  home: https://github.com/google/googletest
+  license: BSD

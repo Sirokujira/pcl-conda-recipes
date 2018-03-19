@@ -1,0 +1,49 @@
+package:
+  name: pcl
+  version: 1.8.1
+
+source:
+  fn:  PCL-1.8.1.zip                                                        [win]
+  url: https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.zip       [win]
+  fn:  pcl-1.8.1.tar.gz                                                     [linux]
+  url: https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.tar.gz    [linux]
+  fn:  pcl-1.8.1.tar.gz                                                     [osx]
+  url: https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.tar.gz    [osx]
+
+
+build:
+  number: 0                       [win]
+  number: 0                       [osx]
+  number: 0                       [linux]
+  msvc_compiler: 14.0
+
+
+requirements:
+  build:
+    - boost       ==1.64.0        
+    - cmake                       
+    # - eigen3      ==3.3.4       
+    - eigen       ==3.3.3         
+    - flann       ==1.9.1         
+    - qhull       ==2015.2        
+    - vtk         ==8.0.1         
+    - libpng                      
+    - zlib                        
+    - freeglut                    [linux]
+    - pkg-config                  [not win]
+    - vc 14                       # [win and py>=35]
+  run:
+    - boost       ==1.64.0        
+    # - eigen3      ==3.3.4       
+    - eigen       ==3.3.3         
+    - flann       ==1.9.1         
+    - qhull       ==2015.2        
+    - vtk         ==8.0.1         
+    - libpng                      
+    - zlib                        
+    - vc 14                       # [win and py>=35]
+
+
+about:
+  home: http://pointclouds.org/
+  license: BSD

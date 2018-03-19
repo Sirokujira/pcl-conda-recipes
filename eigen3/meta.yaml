@@ -1,0 +1,33 @@
+package:
+  name: eigen3
+  version: "3.3.4"
+
+source:
+  fn: eigen3-3.3.4.zip                                      [win64] 
+  url: http://bitbucket.org/eigen/eigen/get/3.3.4.zip       [win64]
+  fn: eigen3-3.3.4.tar.gz                                   [linux]
+  url: http://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2   [linux]
+  fn: eigen3-3.3.4.tar.gz                                   [osx]
+  url: http://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2   [osx]
+
+
+build:
+  number: 0
+  msvc_compiler: 14.0
+
+
+requirements:
+  build:
+    - cmake                 
+    - pkg-config            [not win]
+    - vc 14                 # [win and py>=35]
+
+
+test:
+  files:
+    - test.cc     [not win]
+
+about:
+  home: http://eigen.tuxfamily.org/
+  license: MPL2
+  summary: 'C++ template library for linear algebra'

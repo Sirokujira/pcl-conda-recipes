@@ -1,0 +1,32 @@
+package:
+  name: qhull
+  version: 2015.2
+
+
+source:
+  fn:  qhull-2015.2.zip                                                         [win]
+  url: http://www.qhull.org/download/qhull-2015.2.zip                           [win]
+  md5: 50d07dd461cb18c51a6550ac16a3ac4f                                         [win]
+  fn:  qhull-2015-src-7.2.0.tgz                                                 [linux]
+  url: http://www.qhull.org/download/qhull-2015-src-7.2.0.tgz                   [linux]
+  md5: e6270733a826a6a7c32b796e005ec3dc                                         [linux]
+  fn:  qhull-2015-src-7.2.0.tgz                                                 [osx]
+  url: http://www.qhull.org/download/qhull-2015-src-7.2.0.tgz                   [osx]
+  md5: e6270733a826a6a7c32b796e005ec3dc                                         [osx]
+
+
+build:
+  number: 0
+  msvc_compiler: 14.0
+
+
+requirements:
+  build:
+    - cmake             
+    - vc 14             # [win and py>=35]
+
+
+about:
+  home: http://www.qhull.org/
+  license: ???
+  summary: 'Qhull computes the convex hull'

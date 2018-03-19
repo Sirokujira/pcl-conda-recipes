@@ -1,0 +1,31 @@
+package:
+  name: icu
+  version: 59.1
+
+source:
+  fn:  icu4c-59_1-Win64-MSVC2015.zip                                                        [win64]
+  url: https://sourceforge.net/projects/icu/files/ICU4C/59.1/icu4c-59_1-Win64-MSVC2015.zip  [win64]
+  md5: 846620e896b14dea5df251fd256fe2ac                                                     [win64]
+  fn:  icu4c-59_1-src.tgz                                                                   [linux]
+  url: http://download.icu-project.org/files/icu4c/59.1/icu4c-59_1-src.tgz                  [linux]
+  md5: 54923fa9fab5b2b83f235fb72523de37                                                     [linux]
+  fn:  icu4c-59_1-src.tgz                                                                   [osx]
+  url: http://download.icu-project.org/files/icu4c/59.1/icu4c-59_1-src.tgz                  [osx]
+  md5: 54923fa9fab5b2b83f235fb72523de37                                                     [osx]
+
+
+build:
+  number: 0             [win]
+  number: 0             [linux]
+  number: 0             [osx]
+
+requirements:
+  build:
+    - gcc               [not win]
+
+  run:
+    - libgcc            [not win]
+
+about:
+    home: http://site.icu-project.org/
+    license: MIT

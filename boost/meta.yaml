@@ -1,0 +1,30 @@
+package:
+  name: boost
+  version: 1.64.0
+
+source:
+  fn:  boost_1_64_0-msvc-14.0-64.exe                                                                         [win64]
+  url: http://downloads.sourceforge.net/project/boost/boost-binaries/1.64.0/boost_1_64_0-msvc-14.0-64.exe    [win64]
+  fn:  boost_1_64_0.tar.bz2                                                                                  [unix]
+  url: http://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2                         [unix]
+#  patches:
+#    - patch-atomic.diff    [osx]
+
+build:
+  number: 0                [win]
+  number: 0                [osx]
+  number: 0                [linux]
+
+requirements:
+  build:    
+    - python               [unix]
+    - icu                  [unix]
+    - bzip2                [unix]
+
+  run:
+    - python
+    - icu                  [unix]
+
+about:
+  home: http://www.boost.org/
+  license: Boost-1.0

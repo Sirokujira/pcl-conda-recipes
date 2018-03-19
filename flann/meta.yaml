@@ -1,0 +1,27 @@
+package:
+  name: flann
+  version: 1.9.1
+
+source:
+  fn: flann-1.9.1.zip                                           [win64]
+  url: https://github.com/mariusmuja/flann/archive/1.9.1.zip    [win64]
+  fn: flann-1.9.1.zip                                           [linux]
+  url: https://github.com/mariusmuja/flann/archive/1.9.1.zip    [linux]
+  fn: flann-1.9.1.zip                                           [osx]
+  url: https://github.com/mariusmuja/flann/archive/1.9.1.zip    [osx]
+
+build:
+  number: 0
+  msvc_compiler: 14.0
+
+
+requirements:
+  build:
+    - cmake
+    - vc 14             # [win and py>=35]
+
+
+about:
+  home: http://www.cs.ubc.ca/research/flann/
+  license: BSD
+  summary: 'flann'
