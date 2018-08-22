@@ -35,7 +35,7 @@ build module clear.
 * `conda build purge`
 
 before setting tools
-* [Visual Studio 2015 C++ Compiler Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools "external-Tools")
+* [Visual Studio 2015 C++ Compiler Tools](https://visualstudio.microsoft.com/vs/older-downloads/ "external-Tools")
 
 before install conda-forge packages
 * `conda install --channel=conda-forge cmake`               (only on Linux and Mac)
@@ -58,20 +58,19 @@ before install conda-forge packages
 * `conda install --channel=conda-forge boost=1.64.0`
    [boost-feedstock](https://github.com/conda-forge/boost-feedstock "boost-feedstock")
 
-* `conda install --channel=conda-forge flann=1.9.1`         (only on Linux and Mac)
+* `conda install --channel=conda-forge flann=1.9.1`
    [flann-feedstock](https://github.com/conda-forge/flann-feedstock "flann-feedstock")
+
+* `conda install --channel=conda-forge qhull=2015.2`
+   [qhull-feedstock](https://github.com/conda-forge/qhull-feedstock "qhull-feedstock")
 
 The build order to follow is this:
 
-* `conda build flann`       (only on Windows)
 * `conda build icu`         (only on Linux and Mac)
-* `conda build qhull`
 * `conda build vtk`         (only on Mac/Windows)
 
 before build pcl
 
-* `conda install flann --use-local` (only on Windows)
-* `conda install qhull --use-local` 
 * `conda install vtk --use-local`   (only on Mac)
 
 * `conda build pcl`
